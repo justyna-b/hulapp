@@ -1,28 +1,44 @@
 .logging-form {
-    &__logo {
-        width: 40rem;
+  &__logo {
+    width: 40rem;
+  }
+
+  &__input {
+    &:not(:last-child) {
+      margin-bottom: $gap-small;
+    }
+    &--data {
+      font-size: 1.6rem;
+      border: none;
+      border-bottom: 0.1rem solid grey;
+      width: 25rem;
+      font-family: $font-lato-thin;
+      letter-spacing: 0.2rem;
+      padding: 0 0 0.3rem 0;
+      transition: all 0.2s;
     }
 
-    &__input {
-
-        &:not(:last-child) {
-            margin-bottom: $gap-small;
-        }
-        &--data {
-            font-size: 1.6rem;
-            border: none;
-            border-bottom: .1rem solid grey;
-            width: 25rem;
-            font-family: $font-lato-thin;
-            letter-spacing: .2rem; 
-            padding: 0 0 .3rem 0;
-            transition: all .2s;
-        }
-
-        &--button {
-            width: 25rem;
-            margin: $gap-medium 0 0 0;
-            text-transform: uppercase;
-        }
+    &--button {
+      width: 25rem;
+      margin: $gap-medium 0 0 0;
+      text-transform: uppercase;
     }
+  }
+  &__forgotten-pwd {
+    margin: $gap-small 0 0 0;
+    font-size: 1.6rem;
+
+    &--link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: red;
+        font-family: $font-lato-regular;
+      }
+    }
+  }
+
+  &__reg {
+    margin: $gap-small 0 0 0;
+  }
 }

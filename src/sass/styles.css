@@ -618,18 +618,33 @@ body {
 .logging-form__input--data {
   font-size: 1.6rem;
   border: none;
-  border-bottom: .1rem solid grey;
+  border-bottom: 0.1rem solid grey;
   width: 25rem;
   font-family: "Lato-Thin";
-  letter-spacing: .2rem;
-  padding: 0 0 .3rem 0;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  letter-spacing: 0.2rem;
+  padding: 0 0 0.3rem 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .logging-form__input--button {
   width: 25rem;
   margin: 5rem 0 0 0;
   text-transform: uppercase;
+}
+
+.logging-form__forgotten-pwd {
+  margin: 2rem 0 0 0;
+  font-size: 1.6rem;
+}
+
+.logging-form__forgotten-pwd--link:link, .logging-form__forgotten-pwd--link:visited {
+  text-decoration: none;
+  color: red;
+  font-family: "Lato-Regular";
+}
+
+.logging-form__reg {
+  margin: 2rem 0 0 0;
 }
 /*# sourceMappingURL=styles.css.map */
