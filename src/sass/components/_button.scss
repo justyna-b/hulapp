@@ -1,0 +1,66 @@
+@import '../abstracts/variables';
+
+.button {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.8rem;
+    box-shadow: $button-shadow-link;
+    color: $text-color-light;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: $button-shadow-hover;
+  }
+
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: $button-shadow-active;
+  }
+}
+
+.button-white {
+  background-color: $color-white;
+}
+
+.button-red {
+  background-color: red;
+  // color: white !important;
+}
+
+.button-submit {
+  box-shadow: $shadow-link-light;
+  font-family: $font-lato-thin;
+            font-size: 1.6rem;
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: $shadow-hover-light;
+  }
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: $shadow-active-light;
+  }
+  border: none;
+  color: white ;
+}
+
+//button not with icon
+.button-info {
+  padding: 1.5rem 6rem;
+  border-radius: 10rem;
+  margin-top: 2rem;
+}
+
+.button-log {
+  color: red !important;
+  width: 100%;
+  font-family: $font-lato-bold;
+}
+
+.button-reg {
+  width: 100%;
+  font-family: $font-lato-regular;
+}
