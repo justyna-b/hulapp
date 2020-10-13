@@ -144,7 +144,7 @@ function getStepContent (
         <div>
           {!registerSuccess ? (
             <div>
-              <div className='error-message'>{message}</div>
+              {/* <div className='error-message'>{message}</div> */}
               <RegistrationThirdStep
                 name={name}
                 surname={surname}
@@ -152,6 +152,7 @@ function getStepContent (
                 country={countryName}
                 email={email}
               />
+              <div className='error-message u-center-class'>{message}</div>
             </div>
           ) : (
             // <Redirect to={'/success/' + email} />

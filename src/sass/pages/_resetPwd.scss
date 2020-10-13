@@ -1,0 +1,25 @@
+.reset-pwd {
+  &__logo {
+    width: 50rem;
+  }
+
+  &__input {
+    width: 50rem;
+    margin: $gap-medium 0 $gap-medium 0;
+  }
+
+  &__info {
+    font-size: $font-small;
+  }
+
+  &__to-home {
+    margin-top: $gap-medium;
+    &--link {
+      &:link,
+      &:visited {
+        font-size: 1.3rem;
+        color: $border-light-color;
+      }
+    }
+  }
+}

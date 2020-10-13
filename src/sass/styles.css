@@ -678,7 +678,7 @@ body {
 }
 
 .registration-container {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-family: "Lato-Thin";
 }
 
@@ -720,7 +720,7 @@ body {
 }
 
 .registration-container__summary {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .registration-container__summary--card--title {
@@ -734,10 +734,39 @@ body {
 
 .login-link {
   margin-top: 8rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .login-link__text:link, .login-link__text:visited {
   color: red;
+}
+
+.error-message {
+  color: red;
+  font-family: "Lato-Bold";
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.reset-pwd__logo {
+  width: 50rem;
+}
+
+.reset-pwd__input {
+  width: 50rem;
+  margin: 5rem 0 5rem 0;
+}
+
+.reset-pwd__info {
+  font-size: 1.6rem;
+}
+
+.reset-pwd__to-home {
+  margin-top: 5rem;
+}
+
+.reset-pwd__to-home--link:link, .reset-pwd__to-home--link:visited {
+  font-size: 1.3rem;
+  color: rgba(56, 56, 56, 0.26);
 }
 /*# sourceMappingURL=styles.css.map */
