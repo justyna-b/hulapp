@@ -29,9 +29,14 @@ class LoggingForm extends React.Component {
               zaloguj
             </button>
             <div className='logging-form__forgotten-pwd'>
-              zapomniałeś hasła?
               <a href='!#' className='logging-form__forgotten-pwd--link'>
-                &nbsp; przypomnij
+                zapomniałem hasła
+              </a>
+            </div>
+            <div className='u-center-text login-link'>
+              Nie masz jeszcze konta?
+              <a href='/registration' className='login-link__text'>
+                &nbsp;zarejestruj się
               </a>
             </div>
           </div>

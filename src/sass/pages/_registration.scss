@@ -1,5 +1,5 @@
 .registration-container {
-  font-size: 1.6rem;
+  font-size:  $font-small;
   font-family: $font-lato-thin;
   &__logo {
     width: 20rem;
@@ -27,7 +27,7 @@
   }
 
   &__summary {
-    font-size: 1.6rem;
+    font-size: $font-small;
     &--card {
       &--title {
         font-family: $font-lato-regular;
@@ -38,7 +38,18 @@
 
 .next-button {
   &--red {
-    color: red;
+    color:$color-red;
     font-family: $font-lato-regular;
+  }
+}
+
+.login-link {
+  margin-top: 8rem;
+  font-size:  $font-small;
+  &__text {
+    &:link,
+    &:visited {
+      color: $color-red;
+    }
   }
 }

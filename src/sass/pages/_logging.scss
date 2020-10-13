@@ -10,12 +10,16 @@
     &--data {
       font-size: 1.6rem;
       border: none;
-      border-bottom: 0.1rem solid grey;
+      border-bottom: 0.1rem solid $border-light-color;
       width: 25rem;
       font-family: $font-lato-thin;
       letter-spacing: 0.2rem;
       padding: 0 0 0.3rem 0;
       transition: all 0.2s;
+
+      &::placeholder {
+        color: $text-color-light;
+      }
     }
 
     &--button {
@@ -26,13 +30,13 @@
   }
   &__forgotten-pwd {
     margin: $gap-small 0 0 0;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 
     &--link {
       &:link,
       &:visited {
         text-decoration: none;
-        color: red;
+        color: $border-light-color;
         font-family: $font-lato-regular;
       }
     }

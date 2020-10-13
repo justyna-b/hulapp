@@ -28,13 +28,12 @@
 
 .button-red {
   background-color: red;
-  // color: white !important;
 }
 
 .button-submit {
   box-shadow: $shadow-link-light;
   font-family: $font-lato-thin;
-            font-size: 1.6rem;
+  font-size: 1.6rem;
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: $shadow-hover-light;
@@ -44,7 +43,7 @@
     box-shadow: $shadow-active-light;
   }
   border: none;
-  color: white ;
+  color: white;
 }
 
 //button not with icon
@@ -75,5 +74,5 @@
   &:disabled {
     color: $border-light-color;
     font-family: $font-lato-thin;
-}
+  }
 }

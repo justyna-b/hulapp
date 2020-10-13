@@ -7,16 +7,10 @@ import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
 import Check from '@material-ui/icons/Check'
 import StepConnector from '@material-ui/core/StepConnector'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
 import RegistrationFirstStep from '../pages/registration/RegFirst'
 import RegistrationSecondStep from '../pages/registration/RegSecond'
 import RegistrationThirdStep from '../pages/registration/RegThird'
-// import { Redirect } from 'react-router-dom'
 import logo from './../assets/logo.png'
-// import '../Styles/altReg.css'
-// import { Link } from 'react-router-dom'
-// import RegistrationThirdStep from './RegThirdStep'
 
 const QontoConnector = withStyles({
   alternativeLabel: {
@@ -373,6 +367,10 @@ export default function CustomizedSteppers () {
                   Dalej
                 </button>
               )}
+            </div>
+            <div className='u-center-text login-link'>
+              masz juz konto?
+              <a href='/signin' className='login-link__text'>&nbsp;zaloguj się</a>
             </div>
           </div>
         )}

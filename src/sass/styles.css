@@ -631,13 +631,29 @@ body {
 .logging-form__input--data {
   font-size: 1.6rem;
   border: none;
-  border-bottom: 0.1rem solid grey;
+  border-bottom: 0.1rem solid rgba(56, 56, 56, 0.26);
   width: 25rem;
   font-family: "Lato-Thin";
   letter-spacing: 0.2rem;
   padding: 0 0 0.3rem 0;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+.logging-form__input--data::-webkit-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.logging-form__input--data:-ms-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.logging-form__input--data::-ms-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.logging-form__input--data::placeholder {
+  color: rgba(29, 29, 31, 0.692);
 }
 
 .logging-form__input--button {
@@ -648,12 +664,12 @@ body {
 
 .logging-form__forgotten-pwd {
   margin: 2rem 0 0 0;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .logging-form__forgotten-pwd--link:link, .logging-form__forgotten-pwd--link:visited {
   text-decoration: none;
-  color: red;
+  color: rgba(56, 56, 56, 0.26);
   font-family: "Lato-Regular";
 }
 
@@ -662,7 +678,7 @@ body {
 }
 
 .registration-container {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: "Lato-Thin";
 }
 
@@ -704,7 +720,7 @@ body {
 }
 
 .registration-container__summary {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .registration-container__summary--card--title {
@@ -714,5 +730,14 @@ body {
 .next-button--red {
   color: red;
   font-family: "Lato-Regular";
+}
+
+.login-link {
+  margin-top: 8rem;
+  font-size: 1.5rem;
+}
+
+.login-link__text:link, .login-link__text:visited {
+  color: red;
 }
 /*# sourceMappingURL=styles.css.map */

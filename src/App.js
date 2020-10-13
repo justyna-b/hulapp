@@ -4,8 +4,6 @@ import Start from './pages/Start'
 import LoggingForm from './pages/LoggingForm'
 import Registration from './components/Stepper'
 
-// import Registration from './pages/registration/RegThird'
-
 class App extends React.Component {
   render () {
     return (

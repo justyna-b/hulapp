@@ -15,15 +15,18 @@ function Start () {
             <span className='heading-primary--sub'>czas poruszyć świat!</span>
           </h1>
           <div className='heading-primary--laptop-button'>
-            <a href='#' className='button button-white button-info'>
+            <a href='/registration' className='button button-white button-info'>
               hulaj z nami
             </a>
           </div>
           <div className='heading-primary__phone-buttons'>
-            <a href='#' className='button-log button button-white button-info'>
+            <a href='/signin' className='button-log button button-white button-info'>
               zaloguj
             </a>
-            <a href='#' className=' button-reg button button-white button-info'>
+            <a
+              href='/registration'
+              className=' button-reg button button-white button-info'
+            >
               zarejestruj
             </a>
           </div>
