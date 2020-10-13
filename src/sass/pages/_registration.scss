@@ -1,0 +1,44 @@
+.registration-container {
+  font-size: 1.6rem;
+  font-family: $font-lato-thin;
+  &__logo {
+    width: 20rem;
+  }
+
+  &__input {
+    &--data {
+      width: 50rem;
+      border: none;
+      border-bottom: 0.1rem solid $border-light-color;
+      padding-bottom: 0.4rem;
+      margin-bottom: 3rem;
+      &::placeholder {
+        color: $text-color-light;
+      }
+    }
+
+    &--select {
+      width: 50rem;
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__summary {
+    font-size: 1.6rem;
+    &--card {
+      &--title {
+        font-family: $font-lato-regular;
+      }
+    }
+  }
+}
+
+.next-button {
+  &--red {
+    color: red;
+    font-family: $font-lato-regular;
+  }
+}

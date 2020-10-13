@@ -64,3 +64,16 @@
   width: 100%;
   font-family: $font-lato-regular;
 }
+
+.button-transparent {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  font-family: $font-lato-thin;
+  margin-right: $gap-medium;
+
+  &:disabled {
+    color: $border-light-color;
+    font-family: $font-lato-thin;
+}
+}

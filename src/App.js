@@ -2,6 +2,9 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Start from './pages/Start'
 import LoggingForm from './pages/LoggingForm'
+import Registration from './components/Stepper'
+
+// import Registration from './pages/registration/RegThird'
 
 class App extends React.Component {
   render () {
@@ -11,7 +14,8 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={Start} />
             <Route path='/home' component={Start} />
-             <Route path='/signin' component={LoggingForm} />
+            <Route path='/signin' component={LoggingForm} />
+            <Route path='/registration' component={Registration} />
           </Switch>
         </BrowserRouter>
       </div>

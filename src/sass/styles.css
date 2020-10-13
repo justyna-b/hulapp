@@ -427,6 +427,19 @@ body {
   font-family: "Lato-Regular";
 }
 
+.button-transparent {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  font-family: "Lato-Thin";
+  margin-right: 5rem;
+}
+
+.button-transparent:disabled {
+  color: rgba(56, 56, 56, 0.26);
+  font-family: "Lato-Thin";
+}
+
 .navbar-header {
   position: relative;
   min-height: 7rem;
@@ -646,5 +659,60 @@ body {
 
 .logging-form__reg {
   margin: 2rem 0 0 0;
+}
+
+.registration-container {
+  font-size: 1.6rem;
+  font-family: "Lato-Thin";
+}
+
+.registration-container__logo {
+  width: 20rem;
+}
+
+.registration-container__input--data {
+  width: 50rem;
+  border: none;
+  border-bottom: 0.1rem solid rgba(56, 56, 56, 0.26);
+  padding-bottom: 0.4rem;
+  margin-bottom: 3rem;
+}
+
+.registration-container__input--data::-webkit-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.registration-container__input--data:-ms-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.registration-container__input--data::-ms-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.registration-container__input--data::placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.registration-container__input--select {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.registration-container__input--select:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.registration-container__summary {
+  font-size: 1.6rem;
+}
+
+.registration-container__summary--card--title {
+  font-family: "Lato-Regular";
+}
+
+.next-button--red {
+  color: red;
+  font-family: "Lato-Regular";
 }
 /*# sourceMappingURL=styles.css.map */
