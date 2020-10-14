@@ -12,8 +12,8 @@ class Sidebar extends React.Component {
               </a>
             </li>
             <li className='side-nav__item'>
-              <a href='#' className='side-nav__link'>
-                <span>Trasy</span>
+              <a href='/users-tracks' className='side-nav__link'>
+                <span>Moje trasy</span>
               </a>
             </li>
             <li className='side-nav__item'>

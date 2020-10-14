@@ -5,6 +5,7 @@ import LoggingForm from './pages/LoggingForm'
 import Registration from './components/Stepper'
 import ResetPwd from './pages/ResetPwd'
 import UsersPostsAll from './pages/post/UsersPostsAll'
+import UsersTracks from './pages/user/UsersTracks'
 
 class App extends React.Component {
   render () {
@@ -18,6 +19,7 @@ class App extends React.Component {
             <Route path='/registration' component={Registration} />
             <Route path='/reset-pwd' component={ResetPwd} />
             <Route path='/users-home' component={UsersPostsAll} />
+            <Route path='/users-tracks' component={UsersTracks} />
           </Switch>
         </BrowserRouter>
       </div>

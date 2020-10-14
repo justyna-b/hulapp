@@ -721,7 +721,7 @@ body {
 }
 
 .side-nav__link:hover {
-  color: red;
+  color: rgba(255, 0, 0, 0.7);
   font-family: "Lato-Bold";
 }
 
