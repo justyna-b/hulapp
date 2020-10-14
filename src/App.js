@@ -14,12 +14,12 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path='/' component={Start} />
-            <Route path='/home' component={Start} />
-            <Route path='/signin' component={LoggingForm} />
-            <Route path='/registration' component={Registration} />
-            <Route path='/reset-pwd' component={ResetPwd} />
-            <Route path='/users-home' component={UsersPostsAll} />
-            <Route path='/users-tracks' component={UsersTracks} />
+            <Route path='hulapp-web.web.app/home' component={Start} />
+            <Route path='hulapp-web.web.app/signin' component={LoggingForm} />
+            <Route path='hulapp-web.web.app/registration' component={Registration} />
+            <Route path='hulapp-web.web.app/reset-pwd' component={ResetPwd} />
+            <Route path='hulapp-web.web.app/users-home' component={UsersPostsAll} />
+            <Route path='hulapp-web.web.app/users-tracks' component={UsersTracks} />
           </Switch>
         </BrowserRouter>
       </div>
