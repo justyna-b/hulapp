@@ -144,7 +144,6 @@ function getStepContent (
         <div>
           {!registerSuccess ? (
             <div>
-              {/* <div className='error-message'>{message}</div> */}
               <RegistrationThirdStep
                 name={name}
                 surname={surname}
@@ -156,11 +155,10 @@ function getStepContent (
             </div>
           ) : (
             // <Redirect to={'/success/' + email} />
-            <div>najs</div>
+            <div className='u-center-text'>Jeszcze moment i będziemy hulać razem! Sprawdz co od nas dostałeś na swojej skrzynce mailowej</div>
           )}
         </div>
       )
-
     default:
       return 'Unknown step'
   }

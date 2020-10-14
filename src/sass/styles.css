@@ -355,6 +355,16 @@ body {
   margin-right: 8rem;
 }
 
+.grid-row--col-1-of-7 {
+  width: calc(100% / 7);
+  float: left;
+}
+
+.grid-row--col-6-of-7 {
+  width: calc(((100% / 7) * 6));
+  float: left;
+}
+
 .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -486,6 +496,39 @@ body {
 .navbar-header__link--register:link, .navbar-header__link--register:visited {
   color: rgba(29, 29, 31, 0.692);
   margin: 0 5rem 0 0;
+}
+
+.navbar-header__user {
+  position: absolute;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+  left: 80%;
+}
+
+.navbar-header__user--photo {
+  width: 3.5rem;
+  border-radius: 100rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.navbar-header__user--logout {
+  display: inline-block;
+  font-family: "Lato-Thin";
+  color: rgba(29, 29, 31, 0.692);
+  font-size: 1.3rem;
+}
+
+.navbar-header__user--logout--btn:link, .navbar-header__user--logout--btn:visited {
+  font-family: "Lato-Regular";
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  color: black;
 }
 
 .scrolled {
@@ -768,5 +811,16 @@ body {
 .reset-pwd__to-home--link:link, .reset-pwd__to-home--link:visited {
   font-size: 1.3rem;
   color: rgba(56, 56, 56, 0.26);
+}
+
+.sider {
+  background-color: white;
+  border-right: 1px solid grey;
+  min-height: calc(100vh - 7rem);
+}
+
+.posts {
+  background-color: #f7f7f7;
+  min-height: calc(100vh - 7rem);
 }
 /*# sourceMappingURL=styles.css.map */

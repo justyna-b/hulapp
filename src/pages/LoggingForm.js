@@ -18,7 +18,7 @@ class LoggingForm extends React.Component {
 
     this.Auth.login(this.state.email, this.state.password)
       .then(res => {
-        this.props.history.replace('/profile-edit')
+        this.props.history.replace('/users-home')
       })
       .catch(error => {
         this.setState({

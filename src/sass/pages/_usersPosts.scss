@@ -1,0 +1,13 @@
+.posts-container {
+}
+.sider {
+    background-color:white;
+    border-right: 1px solid grey;
+    min-height: calc(100vh - 7rem);
+}
+
+.posts {
+    background-color: $color-light-grey;
+    min-height: calc(100vh - 7rem);
+}
+

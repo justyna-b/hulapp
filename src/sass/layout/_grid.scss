@@ -24,4 +24,14 @@
       margin-right: $grid-vertical-gutter;
     }
   }
+
+  &--col-1-of-7 {
+    width: calc(100% / 7);
+    float: left;
+  }
+
+  &--col-6-of-7 {
+    width: calc(((100% / 7) * 6));
+    float: left;
+  }
 }

@@ -43,6 +43,40 @@
       margin: 0 5rem 0 0;
     }
   }
+
+  &__user {
+    position: absolute;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    left: 80%;
+    &--photo {
+      width: 3.5rem;
+      border-radius: 100rem;
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    &--logout {
+      display: inline-block;
+      font-family: $font-lato-thin;
+      color: $text-color-light;
+      font-size: 1.3rem;
+
+      &--btn {
+        &:link,
+        &:visited {
+          font-family: $font-lato-regular;
+          font-size: 1.4rem;
+          margin-left: 2rem;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
 }
 
 .scrolled {
