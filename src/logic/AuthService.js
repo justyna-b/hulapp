@@ -9,7 +9,7 @@ export default class AuthService {
     }
 
     login(username, password) {
-        return this.fetch('http://hulapp.pythonanywhere.com/auth/jwt/create/', {
+        return this.fetch('https://hulapp.pythonanywhere.com/auth/jwt/create/', {
             method: 'POST',
             body: JSON.stringify({
                 email: username,
@@ -23,7 +23,7 @@ export default class AuthService {
     }
 
     refresh() {
-        return fetch('http://hulapp.pythonanywhere.com/auth/jwt/refresh/', {
+        return fetch('https://hulapp.pythonanywhere.com/auth/jwt/refresh/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

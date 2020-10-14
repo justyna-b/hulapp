@@ -42,7 +42,7 @@ function Footer () {
       <div className='brand'>
         <div className='brand__text'>
           &copy;
-          <a href='http://localhost:5000' className='brand__text--link'>
+          <a href='/home' className='brand__text--link'>
             Hulapp
           </a>
         </div>

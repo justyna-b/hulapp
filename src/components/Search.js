@@ -29,7 +29,7 @@ export default class Search extends React.Component {
   async retrieveDataAsynchronously (searchText) {
     if (await this.Auth.loggedIn()) {
       this.Auth.fetch(
-        `http://hulapp.pythonanywhere.com/api/users/?search=${searchText}`
+        `https://hulapp.pythonanywhere.com/api/users/?search=${searchText}`
       ).then(res => {
         if (typeof res.detail !== 'undefined') {
           console.log('not undef')

@@ -11,7 +11,7 @@ class ResetPassword extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    fetch('http://hulapp.pythonanywhere.com/auth/users/reset_password/', {
+    fetch('https://hulapp.pythonanywhere.com/auth/users/reset_password/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

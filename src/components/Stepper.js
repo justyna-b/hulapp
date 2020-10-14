@@ -250,7 +250,7 @@ export default function CustomizedSteppers () {
 
   const handleSubmit = event => {
     event.preventDefault()
-    fetch('http://hulapp.pythonanywhere.com/auth/users/', {
+    fetch('https://hulapp.pythonanywhere.com/auth/users/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

@@ -14,7 +14,7 @@ class LoggedInNavbar extends React.Component {
   }
   async componentDidMount () {
     if (await this.Auth.loggedIn()) {
-      this.Auth.fetch('http://hulapp.pythonanywhere.com/auth/users/me/')
+      this.Auth.fetch('https://hulapp.pythonanywhere.com/auth/users/me/')
         .then(res => {
           this.setState({
             name: res.first_name,
@@ -36,7 +36,7 @@ class LoggedInNavbar extends React.Component {
     this.setState({
       redLogPage: true
     })
-    window.location.href = 'http://localhost:5000/home'
+    window.location.href = '/home'
   }
 
   handleUserChange = val => {

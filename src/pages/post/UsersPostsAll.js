@@ -21,7 +21,7 @@ class UsersPostsAll extends React.Component {
 
   async componentDidMount () {
     if (await this.Auth.loggedIn()) {
-      this.Auth.fetch('http://hulapp.pythonanywhere.com/auth/users/me/')
+      this.Auth.fetch('https://hulapp.pythonanywhere.com/auth/users/me/')
         .then(res => {
           this.setState({
             name: res.first_name,
@@ -33,7 +33,7 @@ class UsersPostsAll extends React.Component {
           console.log({ message: 'ERROR ' + error })
         })
 
-      await this.Auth.fetch('http://hulapp.pythonanywhere.com/api/post')
+      await this.Auth.fetch('https://hulapp.pythonanywhere.com/api/post')
         .then(response => {
           this.setState({
             posts: response

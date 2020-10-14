@@ -18,7 +18,7 @@ class PostAdd extends React.Component {
 
   async componentDidMount () {
     if (await this.Auth.loggedIn()) {
-      this.Auth.fetch('http://hulapp.pythonanywhere.com/auth/users/me/')
+      this.Auth.fetch('https://hulapp.pythonanywhere.com/auth/users/me/')
         .then(response => {
           this.setState({
             name: response.first_name,
@@ -48,7 +48,7 @@ class PostAdd extends React.Component {
     if (this.state.content <= 0) {
       alert('nie możesz dodać pustego posta!')
     } else {
-      this.Auth.fetch('http://hulapp.pythonanywhere.com/api/post/', {
+      this.Auth.fetch('https://hulapp.pythonanywhere.com/api/post/', {
         method: 'POST',
 
         body: JSON.stringify({

@@ -27,7 +27,7 @@ export default class AutoCompleteForm extends React.Component {
    */
   retrieveDataAsynchronously (searchText) {
     let _this = this
-    let url = `http://hulapp.pythonanywhere.com/api/${this.props.dest}/${searchText}`
+    let url = `https://hulapp.pythonanywhere.com/api/${this.props.dest}/${searchText}`
 
     let xhr = new XMLHttpRequest()
     xhr.open('GET', url, true)

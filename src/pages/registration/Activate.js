@@ -15,7 +15,7 @@ class Activate extends Component {
   }
 
   componentDidMount () {
-    fetch('http://hulapp.pythonanywhere.com/auth/users/activation/', {
+    fetch('https://hulapp.pythonanywhere.com/auth/users/activation/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

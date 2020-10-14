@@ -7,6 +7,8 @@ import ResetPwd from './pages/ResetPwd'
 import UsersPostsAll from './pages/post/UsersPostsAll'
 import UsersTracks from './pages/user/UsersTracks'
 import Activate from './pages/registration/Activate'
+import Account from './pages/user/Account'
+
 
 class App extends React.Component {
   render () {
@@ -22,6 +24,7 @@ class App extends React.Component {
             <Route path='/users-home' component={UsersPostsAll} />
             <Route path='/users-tracks' component={UsersTracks} />
             <Route path='/activate' component={Activate} />
+            <Route path='/my-account' component={Account}/>
           </Switch>
         </BrowserRouter>
       </div>
