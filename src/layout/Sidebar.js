@@ -3,22 +3,22 @@ import React from 'react'
 class Sidebar extends React.Component {
   render () {
     return (
-      <div className='sidebar-content'>
-        <nav className='sidebar'>
+      <div className='content'>
+        <nav className='sidebar scrolled-nav'>
           <ul className='side-nav'>
+            <li className='side-nav__item side-nav__item'>
+              <a href='#' className='side-nav__link'>
+                <span>Mój profil</span>
+              </a>
+            </li>
             <li className='side-nav__item'>
-              <a href='#!' className='side-nav__link'>
-                <span>trasy</span>
+              <a href='#' className='side-nav__link'>
+                <span>Trasy</span>
               </a>
             </li>
-             <li className='side-nav__item'>
-              <a href='#!' className='side-nav__link'>
-                <span>mój profil</span>
-              </a>
-            </li>
-             <li className='side-nav__item'>
-              <a href='#!' className='side-nav__link'>
-                <span>posty</span>
+            <li className='side-nav__item'>
+              <a href='/users-home' className='side-nav__link'>
+                <span>Tablica</span>
               </a>
             </li>
           </ul>

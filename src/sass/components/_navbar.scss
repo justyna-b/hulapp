@@ -78,9 +78,13 @@
     }
   }
 }
-
 .scrolled {
   position: fixed;
   top: 0;
   left: 0;
+}
+.scrolled-nav {
+  position: fixed;
+  top: 7rem;
+  left: 3rem;
 }

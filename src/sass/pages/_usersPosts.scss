@@ -1,13 +1,18 @@
-.posts-container {
-}
 .sider {
-    background-color:white;
-    border-right: 1px solid grey;
-    min-height: calc(100vh - 7rem);
+  background-color: white;
+  border-right: 1.5px solid rgba(255, 0, 0, 0.438);
+  min-height: calc(100vh - 7rem);
+  padding-top: 8rem;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
 }
 
 .posts {
-    background-color: $color-light-grey;
-    min-height: calc(100vh - 7rem);
+  background-color: $color-light-grey;
+  min-height: calc(100vh - 7rem);
+  padding-top: 8rem;
 }
-
