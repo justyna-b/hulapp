@@ -957,4 +957,14 @@ body {
   min-height: calc(100vh - 7rem);
   padding-top: 8rem;
 }
+
+.account__photo {
+  width: 100px;
+  height: auto;
+  border-radius: 100px;
+}
+
+.account__data {
+  margin-top: 150px;
+}
 /*# sourceMappingURL=styles.css.map */

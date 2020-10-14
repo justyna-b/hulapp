@@ -23,7 +23,7 @@ class App extends React.Component {
             <Route path='/reset-pwd' component={ResetPwd} />
             <Route path='/users-home' component={UsersPostsAll} />
             <Route path='/users-tracks' component={UsersTracks} />
-            <Route path='/activate' component={Activate} />
+            <Route path='/activate/:uid/:token' component={Activate} />
             <Route path='/my-account' component={Account}/>
           </Switch>
         </BrowserRouter>

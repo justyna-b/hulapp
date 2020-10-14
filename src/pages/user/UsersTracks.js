@@ -4,45 +4,35 @@ import { Redirect } from 'react-router-dom'
 import LoggedInNavbar from '../../layout/LoggedInNavbar'
 import Sidebar from '../../layout/Sidebar'
 import PostAdd from '../../components/PostAdd'
-import Post from '../../components/Post'
+import Track from '../../components/Track'
 
 class UsersTracks extends React.Component {
   constructor (props) {
     super(props)
+
     this.state = {
-      auth: true,
       tracks: [],
+      auth: true,
+      progressBarDisplayState: 'visible',
       name: '',
-      src: '',
-      id: ''
+      surname: '',
+      src: ''
     }
     this.Auth = new AuthService()
   }
 
   async componentDidMount () {
     if (await this.Auth.loggedIn()) {
-      this.Auth.fetch('https://hulapp.pythonanywhere.com/auth/users/me/')
-        .then(res => {
-          this.setState({
-            name: res.first_name,
-            src: res.profile_img,
-            id: res.user_id
-          })
-        })
-        .catch(error => {
-          console.log({ message: 'ERROR ' + error })
-        })
-
-      await this.Auth.fetch('https://hulapp.pythonanywhere.com/api/my-tracks/')
+      this.Auth.fetch('https://hulapp.pythonanywhere.com/api/my-tracks/')
         .then(response => {
           this.setState({
-            tracks: response
+            tracks: response,
+            progressBarDisplayState: 'none'
           })
         })
         .catch(error => {
           console.log({ message: 'ERROR ' + error })
         })
-      //}
     } else {
       this.setState({ auth: false })
     }
@@ -50,8 +40,8 @@ class UsersTracks extends React.Component {
 
   render () {
     return (
-      <div className='posts-container'>
-        {this.state.auth ? '' : <Redirect to='/home' />}
+      <div>
+        {this.state.auth ? '' : <Redirect to='/' />}
         <LoggedInNavbar />
         <div className='grid-row posta-container'>
           <div className='grid-row--col-1-of-7 sider'>
@@ -61,7 +51,14 @@ class UsersTracks extends React.Component {
             {this.state.tracks.length > 0 ? (
               <div>
                 {this.state.tracks.map(track => (
-                  <Post data={track} usersId={this.state.id} />
+                  <Track
+                    data={track}
+                    usersId={this.state.id}
+                    name={this.state.name}
+                    surname={this.state.surname}
+                    src={this.state.src}
+                    key={track.id}
+                  />
                 ))}
               </div>
             ) : (

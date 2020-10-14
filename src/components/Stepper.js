@@ -155,7 +155,10 @@ function getStepContent (
             </div>
           ) : (
             // <Redirect to={'/success/' + email} />
-            <div className='u-center-text'>Jeszcze moment i będziemy hulać razem! Sprawdz co od nas dostałeś na swojej skrzynce mailowej</div>
+            <div className='u-center-text'>
+              Jeszcze moment i będziemy hulać razem! Sprawdz co od nas dostałeś
+              na swojej skrzynce mailowej
+            </div>
           )}
         </div>
       )
@@ -179,6 +182,7 @@ export default function CustomizedSteppers () {
   const [message, setMessage] = useState('')
   const [registerSuccess, setRegisterSuccess] = useState(false)
   const [isEnabled, setEnabled] = useState(false)
+  const [submitEnable, setSubmitEnable] = useState(true)
   const [emptyCounter, setEmptyCounter] = useState(2)
   const values = {
     email,
@@ -249,6 +253,7 @@ export default function CustomizedSteppers () {
   }
 
   const handleSubmit = event => {
+    setSubmitEnable(false)
     event.preventDefault()
     fetch('https://hulapp.pythonanywhere.com/auth/users/', {
       method: 'POST',
@@ -351,6 +356,7 @@ export default function CustomizedSteppers () {
               {activeStep === steps.length - 1 ? (
                 <button
                   variant='contained'
+                  disabled={!submitEnable}
                   onClick={handleSubmit}
                   className='button button-red button-info button-submit logging-form__input--button'
                 >
@@ -369,7 +375,9 @@ export default function CustomizedSteppers () {
             </div>
             <div className='u-center-text login-link'>
               masz juz konto?
-              <a href='/signin' className='login-link__text'>&nbsp;zaloguj się</a>
+              <a href='/signin' className='login-link__text'>
+                &nbsp;zaloguj się
+              </a>
             </div>
           </div>
         )}

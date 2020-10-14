@@ -179,10 +179,17 @@ class Account extends React.Component {
           <div className='grid-row--col-1-of-7 sider'>
             <Sidebar />
           </div>
-          <div className='grid-row--col-6-of-7'>
-          <div>
-          <img src={this.state.src}/>
-          </div>
+          <div className='grid-row--col-6-of-7 posts'>
+            <div className='account u-center-text'>
+              <div>
+                <img className='account__photo' src={this.state.src} />
+                <div>safdds</div>
+              </div>
+              <hr />
+              <div className='account__data post'>
+              jshsfdjshajfhadj
+              </div>
+            </div>
           </div>
         </div>
       </div>
