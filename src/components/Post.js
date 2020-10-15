@@ -15,10 +15,6 @@ export default function Post (props) {
 
   const [usersId, setUsersId] = useState(props.usersId)
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded)
-  }
-
   const longDate = post.date
   const additionDate = longDate.substr(0, 10)
   const additionTime = longDate.substr(11, 12)
@@ -56,7 +52,11 @@ export default function Post (props) {
       </div>
       <div className='post--content'>{post.text}</div>
       <hr />
-      <div className='post--comment'>pokaż komentarze</div>
+      <a href={`/post/${post.postId}/${post.id}`} className='post--comment'>
+      {/* <div className='post--comment'> */}
+      pokaż komentarze
+      {/* </div> */}
+      </a>
     </div>
   )
 }

@@ -10,6 +10,7 @@ import Activate from './pages/registration/Activate'
 import Account from './pages/user/Account'
 import AccountEdit from './pages/user/AccountEdit'
 import FriendAccount from './pages/user/FriendAccount'
+import PostWithComments from './pages/post/PostWithComments'
 
 class App extends React.Component {
   render () {
@@ -28,6 +29,7 @@ class App extends React.Component {
             <Route path='/my-account' component={Account} />
             <Route path='/edit-my' component={AccountEdit} />
             <Route path='/user/:id' component={FriendAccount} />
+            <Route path='/post/:postId/:authorId' component={PostWithComments} />
           </Switch>
         </BrowserRouter>
       </div>
