@@ -6,6 +6,7 @@ import LoggedInNavbar from '../../layout/LoggedInNavbar'
 import Sidebar from '../../layout/Sidebar'
 import { MDBIcon } from 'mdbreact'
 import UserForm from './UserForm'
+import Loader from '../../components/animations/Loader'
 
 class Account extends React.Component {
   constructor (props) {
@@ -21,7 +22,8 @@ class Account extends React.Component {
       cityName: '',
       countryName: '',
       redirect: false,
-      edit: true
+      edit: true,
+      animation: true
     }
     this.Auth = new AuthService()
   }
@@ -54,6 +56,9 @@ class Account extends React.Component {
               countryName: r.name
             })
           })
+          setTimeout(() => {
+            this.setState({ animation: false })
+          }, 3500)
         })
         .catch(error => {
           console.log({ message: 'ERROR ' + error })
@@ -68,22 +73,26 @@ class Account extends React.Component {
       <div className='posts-container'>
         {this.state.auth ? '' : <Redirect to='/home' />}
         <LoggedInNavbar />
-        <div className='grid-row posta-container'>
-          <div className='grid-row--col-1-of-7 sider'>
-            <Sidebar />
+        {this.state.animation ? (
+          <Loader />
+        ) : (
+          <div className='grid-row posta-container'>
+            <div className='grid-row--col-1-of-7 sider'>
+              <Sidebar />
+            </div>
+            <div className='grid-row--col-6-of-7 posts'>
+              <UserForm
+                name={this.state.name}
+                surname={this.state.surname}
+                city={this.state.cityName}
+                country={this.state.countryName}
+                email={this.state.email}
+                src={this.state.src}
+                enableEdition={true}
+              />
+            </div>
           </div>
-          <div className='grid-row--col-6-of-7 posts'>
-            <UserForm
-              name={this.state.name}
-              surname={this.state.surname}
-              city={this.state.cityName}
-              country={this.state.countryName}
-              email={this.state.email}
-              src={this.state.src}
-              enableEdition={true}
-            />
-          </div>
-        </div>
+        )}
       </div>
     )
   }

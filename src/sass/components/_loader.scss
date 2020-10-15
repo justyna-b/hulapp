@@ -1,0 +1,25 @@
+#loader-person {
+  position: relative;
+  height: 28.1rem;
+  width: 45rem;
+  left: 80%;
+  animation-name: moveInLeft;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+#loader-person img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#loader-person img.top {
+  animation-name: inAndOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+}

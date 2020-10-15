@@ -11,8 +11,6 @@ import Account from './pages/user/Account'
 import AccountEdit from './pages/user/AccountEdit'
 import FriendAccount from './pages/user/FriendAccount'
 
-
-
 class App extends React.Component {
   render () {
     return (
@@ -27,9 +25,9 @@ class App extends React.Component {
             <Route path='/users-home' component={UsersPostsAll} />
             <Route path='/users-tracks' component={UsersTracks} />
             <Route path='/activate/:uid/:token' component={Activate} />
-            <Route path='/my-account' component={Account}/>
-            <Route path='/edit-my' component={AccountEdit}/>
-            <Route path='/user/:id' component={FriendAccount}/>
+            <Route path='/my-account' component={Account} />
+            <Route path='/edit-my' component={AccountEdit} />
+            <Route path='/user/:id' component={FriendAccount} />
           </Switch>
         </BrowserRouter>
       </div>
