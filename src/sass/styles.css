@@ -918,8 +918,8 @@ body {
   left: 80%;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -927,6 +927,7 @@ body {
 #loader-person img {
   position: absolute;
   left: 0;
+  top: 50%;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }

@@ -4,12 +4,13 @@
   width: 45rem;
   left: 80%;
   animation-name: moveInLeft;
-  animation-duration: 6s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 #loader-person img {
   position: absolute;
   left: 0;
+  top: 50%;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;

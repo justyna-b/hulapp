@@ -5,6 +5,7 @@ import LoggedInNavbar from '../../layout/LoggedInNavbar'
 import Sidebar from '../../layout/Sidebar'
 import PostAdd from '../../components/PostAdd'
 import Post from '../../components/Post'
+import Loader from '../../components/animations/Loader'
 
 class UsersPostsAll extends React.Component {
   constructor (props) {
@@ -14,7 +15,8 @@ class UsersPostsAll extends React.Component {
       posts: [],
       name: '',
       src: '',
-      id: ''
+      id: '',
+      animation: true
     }
     this.Auth = new AuthService()
   }
@@ -38,11 +40,13 @@ class UsersPostsAll extends React.Component {
           this.setState({
             posts: response
           })
+          setTimeout(() => {
+            this.setState({ animation: false })
+          }, 3500)
         })
         .catch(error => {
           console.log({ message: 'ERROR ' + error })
         })
-      //}
     } else {
       this.setState({ auth: false })
     }
@@ -53,19 +57,23 @@ class UsersPostsAll extends React.Component {
       <div className='posts-container'>
         {this.state.auth ? '' : <Redirect to='/home' />}
         <LoggedInNavbar />
-        <div className='grid-row posta-container'>
-          <div className='grid-row--col-1-of-7 sider'>
-            <Sidebar />
-          </div>
-          <div className='grid-row--col-6-of-7 posts'>
-            <PostAdd />
-            <div>
-              {this.state.posts.map(post => (
-                <Post data={post} usersId={this.state.id} />
-              ))}
+        {this.state.animation ? (
+          <Loader />
+        ) : (
+          <div className='grid-row posta-container'>
+            <div className='grid-row--col-1-of-7 sider'>
+              <Sidebar />
+            </div>
+            <div className='grid-row--col-6-of-7 posts'>
+              <PostAdd />
+              <div>
+                {this.state.posts.map(post => (
+                  <Post data={post} usersId={this.state.id} />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     )
   }

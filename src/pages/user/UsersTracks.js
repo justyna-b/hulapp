@@ -5,6 +5,7 @@ import LoggedInNavbar from '../../layout/LoggedInNavbar'
 import Sidebar from '../../layout/Sidebar'
 import PostAdd from '../../components/PostAdd'
 import Track from '../../components/Track'
+import Loader from '../../components/animations/Loader'
 
 class UsersTracks extends React.Component {
   constructor (props) {
@@ -16,7 +17,8 @@ class UsersTracks extends React.Component {
       progressBarDisplayState: 'visible',
       name: '',
       surname: '',
-      src: ''
+      src: '',
+      animation: true
     }
     this.Auth = new AuthService()
   }
@@ -29,6 +31,9 @@ class UsersTracks extends React.Component {
             tracks: response,
             progressBarDisplayState: 'none'
           })
+          setTimeout(() => {
+            this.setState({ animation: false })
+          }, 3500)
         })
         .catch(error => {
           console.log({ message: 'ERROR ' + error })
@@ -43,29 +48,34 @@ class UsersTracks extends React.Component {
       <div>
         {this.state.auth ? '' : <Redirect to='/' />}
         <LoggedInNavbar />
-        <div className='grid-row posta-container'>
-          <div className='grid-row--col-1-of-7 sider'>
-            <Sidebar />
+
+        {this.state.animation ? (
+          <Loader />
+        ) : (
+          <div className='grid-row posta-container'>
+            <div className='grid-row--col-1-of-7 sider'>
+              <Sidebar />
+            </div>
+            <div className='grid-row--col-6-of-7 posts'>
+              {this.state.tracks.length > 0 ? (
+                <div>
+                  {this.state.tracks.map(track => (
+                    <Track
+                      data={track}
+                      usersId={this.state.id}
+                      name={this.state.name}
+                      surname={this.state.surname}
+                      src={this.state.src}
+                      key={track.id}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div> wyglada na to że nie masz żadnej trasy :/ </div>
+              )}
+            </div>
           </div>
-          <div className='grid-row--col-6-of-7 posts'>
-            {this.state.tracks.length > 0 ? (
-              <div>
-                {this.state.tracks.map(track => (
-                  <Track
-                    data={track}
-                    usersId={this.state.id}
-                    name={this.state.name}
-                    surname={this.state.surname}
-                    src={this.state.src}
-                    key={track.id}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div> wyglada na to że nie masz żadnej trasy :/ </div>
-            )}
-          </div>
-        </div>
+        )}
       </div>
     )
   }
