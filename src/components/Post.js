@@ -52,11 +52,11 @@ export default function Post (props) {
       </div>
       <div className='post--content'>{post.text}</div>
       <hr />
-      <a href={`/post/${post.postId}/${post.id}`} className='post--comment'>
-      {/* <div className='post--comment'> */}
-      pokaż komentarze
-      {/* </div> */}
-      </a>
+      <div className='comment-link'>
+        <a href={`/post/${post.postId}/${post.id}`} className='post--comment'>
+          pokaż komentarze
+        </a>
+      </div>
     </div>
   )
 }

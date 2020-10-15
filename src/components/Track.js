@@ -59,7 +59,7 @@ class Track extends React.Component {
           </div>
           <div className='post--content'>
             <p>
-              Czas trwania: <b>{this.state.track.duration}</b>
+              Czas trwania: <b>{this.state.track.duration}</b> m
             </p>
             <p>
               Odległość: <b>{this.state.track.track_length}</b> km

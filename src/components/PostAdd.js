@@ -63,8 +63,11 @@ class PostAdd extends React.Component {
             return response.json()
           }
         })
-        .then(this.setState({ alertSuccessVisible: true }))
-        .then(setTimeout(() => this.setState({ success: true }), 2000))
+        .then(
+          setTimeout(() => {
+            window.location.reload()
+          }, 1000)
+        )
     }
   }
 

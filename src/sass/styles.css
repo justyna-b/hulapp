@@ -896,9 +896,15 @@ body {
   width: 90%;
 }
 
-.post--comment {
+.post--comment:link, .post--comment:visited {
   padding-left: 80%;
   padding-bottom: 1.2rem;
+  color: black;
+  text-decoration: none;
+}
+
+.post--comment:hover {
+  color: black;
 }
 
 .post-add {
@@ -941,6 +947,11 @@ textarea::-ms-input-placeholder {
 textarea::placeholder {
   font-family: "Lato-Thin";
   color: rgba(29, 29, 31, 0.692);
+}
+
+.comment-link {
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 #loader-person {
