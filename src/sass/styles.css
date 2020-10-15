@@ -927,7 +927,7 @@ body {
 #loader-person img {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 20%;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }

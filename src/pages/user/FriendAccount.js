@@ -6,6 +6,7 @@ import LoggedInNavbar from '../../layout/LoggedInNavbar'
 import Sidebar from '../../layout/Sidebar'
 import { MDBIcon } from 'mdbreact'
 import UserForm from './UserForm'
+import Loader from '../../components/animations/Loader'
 
 class FriendAccount extends React.Component {
   constructor (props) {
@@ -22,7 +23,8 @@ class FriendAccount extends React.Component {
       countryName: '',
       redirect: false,
       loadig: false,
-      edit: true
+      edit: true,
+      animation: true
     }
     this.Auth = new AuthService()
   }
@@ -58,6 +60,9 @@ class FriendAccount extends React.Component {
               countryName: r.name
             })
           })
+          setTimeout(() => {
+            this.setState({ animation: false })
+          }, 3500)
         })
         .catch(error => {
           console.log({ message: 'ERROR ' + error })
@@ -72,7 +77,27 @@ class FriendAccount extends React.Component {
       <div className='posts-container'>
         {this.state.auth ? '' : <Redirect to='/home' />}
         <LoggedInNavbar />
-        <div className='grid-row posta-container'>
+        {this.state.animation ? (
+          <Loader />
+        ) : (
+          <div className='grid-row posta-container'>
+            <div className='grid-row--col-1-of-7 sider'>
+              <Sidebar />
+            </div>
+            <div className='grid-row--col-6-of-7 posts'>
+              <UserForm
+                name={this.state.name}
+                surname={this.state.surname}
+                city={this.state.cityName}
+                country={this.state.countryName}
+                email={this.state.email}
+                src={this.state.src}
+                enableEdition={false}
+              />
+            </div>
+          </div>
+        )}
+        {/* <div className='grid-row posta-container'>
           <div className='grid-row--col-1-of-7 sider'>
             <Sidebar />
           </div>
@@ -87,7 +112,7 @@ class FriendAccount extends React.Component {
               enableEdition={false}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }
