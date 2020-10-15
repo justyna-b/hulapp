@@ -17,7 +17,7 @@ class UserForm extends React.Component {
               <div className='account__data--edit'>
                 <Link to='/edit-my'>
                   <span className='account__data--edit--text'>
-                    edytuj profil
+                    edytuj mój profil
                   </span>
                   <MDBIcon size='1x' icon='edit' className='icon-red' />
                 </Link>

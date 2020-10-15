@@ -7,11 +7,11 @@ import Sidebar from '../../layout/Sidebar'
 import { MDBIcon } from 'mdbreact'
 import UserForm from './UserForm'
 
-class Account extends React.Component {
+class FriendAccount extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      userId: '',
+      userId: this.props.match.params.id,
       email: '',
       name: '',
       surname: '',
@@ -21,6 +21,7 @@ class Account extends React.Component {
       cityName: '',
       countryName: '',
       redirect: false,
+      loadig: false,
       edit: true
     }
     this.Auth = new AuthService()
@@ -28,7 +29,10 @@ class Account extends React.Component {
 
   async componentDidMount () {
     if (await this.Auth.loggedIn()) {
-      this.Auth.fetch('https://hulapp.pythonanywhere.com/auth/users/me/')
+      this.Auth.fetch(
+        'https://hulapp.pythonanywhere.com/api/users/' +
+          this.props.match.params.id
+      )
         .then(res => {
           this.setState({
             name: res.first_name,
@@ -80,7 +84,7 @@ class Account extends React.Component {
               country={this.state.countryName}
               email={this.state.email}
               src={this.state.src}
-              enableEdition={true}
+              enableEdition={false}
             />
           </div>
         </div>
@@ -89,4 +93,4 @@ class Account extends React.Component {
   }
 }
 
-export default Account
+export default FriendAccount

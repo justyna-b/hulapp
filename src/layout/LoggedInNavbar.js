@@ -1,6 +1,6 @@
 import React from 'react'
 import AuthService from '../logic/AuthService'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import Search from '../components/Search'
 
 class LoggedInNavbar extends React.Component {
@@ -8,7 +8,8 @@ class LoggedInNavbar extends React.Component {
     super(props)
     this.state = {
       auth: true,
-      name: ''
+      name: '',
+      redirect: false
     }
     this.Auth = new AuthService()
   }
@@ -46,7 +47,7 @@ class LoggedInNavbar extends React.Component {
     })
     {
       setTimeout(() => {
-        window.location.href = `http://localhost:5000/user/${val}`
+        window.location.href = `/user/${val}`
       }, 500)
     }
   }
@@ -70,8 +71,6 @@ class LoggedInNavbar extends React.Component {
               value={this.state.user}
               defVal={this.state.userId}
               onClick={this.clickHandler}
-              let
-              url={'/user/' + this.state.userId}
             />
           </form>
           <div className='navbar-header__user'>
