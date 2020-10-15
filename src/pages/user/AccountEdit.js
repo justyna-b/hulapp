@@ -102,10 +102,6 @@ class AccountEdit extends React.Component {
     this.setState({ city: val.id })
   }
 
-  handleCountryChange = val => {
-    this.setState({ countryId: val.id })
-  }
-
   fileSelectedHandler = event => {
     this.setState({
       fileUploaded: event.target.files[0],
@@ -219,14 +215,14 @@ class AccountEdit extends React.Component {
                         placeholder={this.state.name}
                         className='edit-input'
                         type='text'
-                        value={this.state.name}
                         onChange={this.handleChange}
+                        name='name'
                       />
                       <input
                         placeholder={this.state.surname}
                         className='edit-input'
                         type='text'
-                        value={this.state.surname}
+                        name='surname'
                         onChange={this.handleChange}
                       />
                     </div>
