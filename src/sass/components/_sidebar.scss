@@ -20,8 +20,9 @@
     left: 0;
     height: 100%;
     width: 3px;
-    border: 1.5px solid rgba(255, 0, 0, 0.438);
-    border-radius: 100rem;
+    border-bottom: 2px solid red;
+
+    // border-radius: 100rem;
     transform: scaleY(0);
     text-align: center;
     transition: transform 0.2s, width 0.6s, border 0.1s;
@@ -35,8 +36,8 @@
 
   &__link:link,
   &__link:visited {
-    color: rgba(255, 0, 0, 0.7);
-    font-family: $font-lato-regular;
+    color: red;
+    font-family: $font-lato-bold;
     text-decoration: none;
     text-transform: uppercase;
     display: block;
@@ -49,7 +50,7 @@
   }
 
   &__link:hover {
-    color:  rgba(255, 0, 0, 0.7);
-    font-family: $font-lato-bold;
+    color: red;
+    transform: scale(1.1);
   }
 }

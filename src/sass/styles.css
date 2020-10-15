@@ -817,8 +817,7 @@ body {
   left: 0;
   height: 100%;
   width: 3px;
-  border: 1.5px solid rgba(255, 0, 0, 0.438);
-  border-radius: 100rem;
+  border-bottom: 2px solid red;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   text-align: center;
@@ -835,8 +834,8 @@ body {
 }
 
 .side-nav__link:link, .side-nav__link:visited {
-  color: rgba(255, 0, 0, 0.7);
-  font-family: "Lato-Regular";
+  color: red;
+  font-family: "Lato-Bold";
   text-decoration: none;
   text-transform: uppercase;
   display: block;
@@ -853,8 +852,9 @@ body {
 }
 
 .side-nav__link:hover {
-  color: rgba(255, 0, 0, 0.7);
-  font-family: "Lato-Bold";
+  color: red;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .post {
@@ -1104,7 +1104,6 @@ body {
 
 .sider {
   background-color: white;
-  border-right: 1.5px solid rgba(255, 0, 0, 0.438);
   min-height: calc(100vh - 7rem);
   padding-top: 8rem;
 }
