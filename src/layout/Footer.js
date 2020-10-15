@@ -21,7 +21,7 @@ function Footer () {
                 className='icon icon--button button'
               />
             </a>
-            <a href='https://www.instagram.com/hulajurbansquad/'>
+            <a href='https://pl-pl.facebook.com/pages/category/Education/Hulaj-Urban-Squad-159368564597140/'>
               <MDBIcon
                 fab
                 icon='facebook'

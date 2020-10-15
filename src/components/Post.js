@@ -42,17 +42,15 @@ export default function Post (props) {
           <div className='post__header--name'>
             {post.name} {post.surname}
           </div>
-          <div className='post-header--date'>
-            {post.modDate == null ? (
-              <div>
-                {additionDate} {additionTimeFormatted}
-              </div>
-            ) : (
-              <div>
-                Edytowano: {modificationDate} {modificationTimeFormatted}
-              </div>
-            )}
-          </div>
+          {post.modDate == null ? (
+            <div className='post__header--date'>
+              {additionDate} {additionTimeFormatted}
+            </div>
+          ) : (
+            <div className='post__header--date'>
+              Edytowano: {modificationDate} {modificationTimeFormatted}
+            </div>
+          )}
         </div>
         <hr />
       </div>

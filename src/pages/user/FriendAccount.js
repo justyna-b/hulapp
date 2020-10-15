@@ -97,22 +97,6 @@ class FriendAccount extends React.Component {
             </div>
           </div>
         )}
-        {/* <div className='grid-row posta-container'>
-          <div className='grid-row--col-1-of-7 sider'>
-            <Sidebar />
-          </div>
-          <div className='grid-row--col-6-of-7 posts'>
-            <UserForm
-              name={this.state.name}
-              surname={this.state.surname}
-              city={this.state.cityName}
-              country={this.state.countryName}
-              email={this.state.email}
-              src={this.state.src}
-              enableEdition={false}
-            />
-          </div>
-        </div> */}
       </div>
     )
   }

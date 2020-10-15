@@ -10,7 +10,7 @@
     padding: 1rem;
 
     &--img {
-      width: 4rem;
+      width: 4rem; //
       border-radius: 100rem;
       display: inline;
       margin-right: 2rem;
@@ -24,6 +24,7 @@
 
     &--date {
       font-size: 1.2rem;
+      padding-left: 6rem;
     }
   }
 
@@ -49,4 +50,19 @@
   margin: 2rem 0 2rem 0;
   font-family: $font-lato-regular;
   font-size: 1.3rem;
+}
+
+textarea {
+  color: $text-color-light;
+  border-radius: 10px;
+  border: 1px solid $border-light-color;
+  font-family: $font-lato-thin;
+  padding: 5px;
+  width: 95%;
+  height: 95%;
+
+  &::placeholder {
+    font-family: $font-lato-thin;
+    color: $text-color-light;
+  }
 }

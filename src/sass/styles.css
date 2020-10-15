@@ -638,7 +638,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: inline-block;
-  left: 80%;
+  left: 95%;
+  width: 20%;
 }
 
 .navbar-header__user--photo {
@@ -886,6 +887,7 @@ body {
 
 .post__header--date {
   font-size: 1.2rem;
+  padding-left: 6rem;
 }
 
 .post--content {
@@ -909,6 +911,36 @@ body {
   margin: 2rem 0 2rem 0;
   font-family: "Lato-Regular";
   font-size: 1.3rem;
+}
+
+textarea {
+  color: rgba(29, 29, 31, 0.692);
+  border-radius: 10px;
+  border: 1px solid rgba(56, 56, 56, 0.26);
+  font-family: "Lato-Thin";
+  padding: 5px;
+  width: 95%;
+  height: 95%;
+}
+
+textarea::-webkit-input-placeholder {
+  font-family: "Lato-Thin";
+  color: rgba(29, 29, 31, 0.692);
+}
+
+textarea:-ms-input-placeholder {
+  font-family: "Lato-Thin";
+  color: rgba(29, 29, 31, 0.692);
+}
+
+textarea::-ms-input-placeholder {
+  font-family: "Lato-Thin";
+  color: rgba(29, 29, 31, 0.692);
+}
+
+textarea::placeholder {
+  font-family: "Lato-Thin";
+  color: rgba(29, 29, 31, 0.692);
 }
 
 #loader-person {
