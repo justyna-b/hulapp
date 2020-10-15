@@ -7,7 +7,7 @@ class Sidebar extends React.Component {
         <nav className='sidebar scrolled-nav'>
           <ul className='side-nav'>
             <li className='side-nav__item side-nav__item'>
-              <a href='#' className='side-nav__link'>
+              <a href='/my-account' className='side-nav__link'>
                 <span>Mój profil</span>
               </a>
             </li>

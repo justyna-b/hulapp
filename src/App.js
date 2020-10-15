@@ -8,6 +8,8 @@ import UsersPostsAll from './pages/post/UsersPostsAll'
 import UsersTracks from './pages/user/UsersTracks'
 import Activate from './pages/registration/Activate'
 import Account from './pages/user/Account'
+import AccountEdit from './pages/user/AccountEdit'
+
 
 
 class App extends React.Component {
@@ -25,6 +27,7 @@ class App extends React.Component {
             <Route path='/users-tracks' component={UsersTracks} />
             <Route path='/activate/:uid/:token' component={Activate} />
             <Route path='/my-account' component={Account}/>
+            <Route path='/edit-my' component={AccountEdit}/>
           </Switch>
         </BrowserRouter>
       </div>

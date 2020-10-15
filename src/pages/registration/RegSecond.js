@@ -129,8 +129,7 @@ class RegSecond extends React.Component {
                     ? this.props.value.cityName
                     : 'miasto'
                 }
-                defVal='miasto'
-                
+                defVal='miasto'  
               />
             </div>
             <div className='registration-container__input--select'>

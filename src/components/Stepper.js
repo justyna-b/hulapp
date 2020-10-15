@@ -223,7 +223,7 @@ export default function CustomizedSteppers () {
   }
 
   const handleSelectChange = e => {
-    console.log(e)
+    // console.log(e)
     switch (e.propname) {
       case 'city':
         setCity(e.id)

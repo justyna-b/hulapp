@@ -958,13 +958,102 @@ body {
   padding-top: 8rem;
 }
 
+.account {
+  position: relative;
+}
+
 .account__photo {
-  width: 100px;
+  width: 150px;
   height: auto;
   border-radius: 100px;
+  display: inline;
 }
 
 .account__data {
-  margin-top: 150px;
+  margin-top: 5px;
+}
+
+.account__data--title {
+  font-size: 1.3rem;
+  padding-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.account__data--content {
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+}
+
+.account__data--edit {
+  position: absolute;
+  left: 70%;
+  font-size: 1.3rem;
+  display: inline;
+  top: 25%;
+}
+
+.account__data--edit--text {
+  padding-right: 5px;
+  font-family: "Lato-Regular";
+  color: red;
+}
+
+.icon-red {
+  color: red;
+}
+
+.edit-input {
+  border: none;
+  border-bottom: 1px solid rgba(56, 56, 56, 0.26);
+  margin-right: 20px;
+  color: rgba(56, 56, 56, 0.26);
+}
+
+.edit-input::-webkit-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.edit-input:-ms-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.edit-input::-ms-input-placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.edit-input::placeholder {
+  color: rgba(29, 29, 31, 0.692);
+}
+
+.submit-photo-button {
+  background-color: #ff0000;
+  font-size: 16px;
+  color: #fff;
+  width: 110px;
+  border: 0px;
+  padding: 8px 10px;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 90px;
+}
+
+#change-photo {
+  color: black;
+  font-family: "Lato-Regular";
+  font-size: 1.3rem;
+}
+
+input[type='file'] {
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+  left: 0;
+  font-size: 15px;
+  color: #999999;
+}
+
+.button-photo-wrapper {
+  position: relative;
 }
 /*# sourceMappingURL=styles.css.map */
